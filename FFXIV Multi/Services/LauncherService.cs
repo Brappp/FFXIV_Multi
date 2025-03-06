@@ -9,7 +9,7 @@ using FFXIVClientManager.Utils;
 namespace FFXIVClientManager.Services
 {
     /// <summary>
-    /// Service for launching and managing FFXIV client instances
+    /// Service for launching and managing FFXIV client instances.
     /// </summary>
     public class LauncherService
     {
@@ -22,7 +22,7 @@ namespace FFXIVClientManager.Services
         public event EventHandler<LaunchFailedEventArgs> LaunchFailed;
 
         /// <summary>
-        /// Initializes a new instance of the LauncherService
+        /// Initializes a new instance of the LauncherService.
         /// </summary>
         public LauncherService(LauncherSettings settings, LogHelper logHelper, ProcessMonitor processMonitor)
         {
@@ -33,13 +33,14 @@ namespace FFXIVClientManager.Services
         }
 
         /// <summary>
-        /// Launches a client using the specified profile
+        /// Launches a client using the specified profile.
         /// </summary>
         public async Task<Process> LaunchClientAsync(ClientProfile profile)
         {
             if (profile == null)
                 throw new ArgumentNullException(nameof(profile));
 
+            // Ensure the XIVLauncher path is configured and valid
             if (string.IsNullOrEmpty(_settings.XIVLauncherPath) || !File.Exists(_settings.XIVLauncherPath))
             {
                 string error = "XIVLauncher path is not set or invalid";
@@ -52,8 +53,8 @@ namespace FFXIVClientManager.Services
             {
                 _logHelper.LogInfo($"Launching client for profile: {profile.ProfileName}");
 
-                // Create arguments for XIVLauncher
-                var args = BuildLaunchArguments(profile);
+                // Build command-line arguments for XIVLauncher
+                string args = BuildLaunchArguments(profile);
 
                 // Create process start info
                 var startInfo = new ProcessStartInfo
@@ -64,21 +65,17 @@ namespace FFXIVClientManager.Services
                 };
 
                 // Launch the process
-                var process = Process.Start(startInfo);
-
+                Process process = Process.Start(startInfo);
                 if (process != null)
                 {
                     _logHelper.LogInfo($"Successfully launched client with PID {process.Id}");
 
-                    // Start tracking the process
+                    // Track the process and update profile usage
                     _processMonitor.TrackProcess(profile, process);
-
-                    // Update profile last used time
                     profile.LastUsed = DateTime.Now;
 
-                    // Notify subscribers
+                    // Notify subscribers of successful launch
                     OnClientLaunched(profile, process);
-
                     return process;
                 }
                 else
@@ -98,49 +95,43 @@ namespace FFXIVClientManager.Services
         }
 
         /// <summary>
-        /// Builds command line arguments for XIVLauncher
+        /// Builds the command-line arguments for XIVLauncher based on the profile settings.
         /// </summary>
         private string BuildLaunchArguments(ClientProfile profile)
         {
             var args = new System.Text.StringBuilder();
 
-            // Add config path argument if specified
+            // Config path argument
             if (!string.IsNullOrEmpty(profile.ConfigPath))
             {
                 args.Append($"--roamingPath=\"{profile.ConfigPath}\" ");
             }
-
-            // Add Dalamud plugin path if specified and enabled
+            // Dalamud plugin path argument
             if (profile.EnableDalamud && !string.IsNullOrEmpty(profile.PluginPath))
             {
                 args.Append($"--dalamudPath=\"{profile.PluginPath}\" ");
             }
-
-            // Add Steam argument if enabled
+            // Steam argument
             if (profile.IsSteam)
             {
                 args.Append("--steam ");
             }
-
-            // Add DX11 argument if enabled
+            // DirectX11 mode argument
             if (profile.ForceDX11)
             {
                 args.Append("--dx11 ");
             }
-
-            // Add no-auto-login argument if enabled
+            // No auto-login argument
             if (profile.NoAutoLogin)
             {
                 args.Append("--noautologin ");
             }
-
-            // Add OTP argument if enabled
+            // OTP (One-Time Password) argument
             if (profile.UseOTP)
             {
                 args.Append("--otp ");
             }
-
-            // Add any additional arguments
+            // Additional custom arguments
             if (!string.IsNullOrEmpty(profile.AdditionalArgs))
             {
                 args.Append(profile.AdditionalArgs);
@@ -150,7 +141,7 @@ namespace FFXIVClientManager.Services
         }
 
         /// <summary>
-        /// Sets the delay between launching multiple clients
+        /// Sets the delay (in seconds) between launching multiple clients.
         /// </summary>
         public void SetLaunchDelay(int seconds)
         {
@@ -158,7 +149,7 @@ namespace FFXIVClientManager.Services
         }
 
         /// <summary>
-        /// Gets the current launch delay in seconds
+        /// Gets the current launch delay (in seconds).
         /// </summary>
         public int GetLaunchDelay()
         {
@@ -166,7 +157,8 @@ namespace FFXIVClientManager.Services
         }
 
         /// <summary>
-        /// Launches multiple clients with a delay between each
+        /// Launches multiple clients sequentially with a delay between each launch.
+        /// Returns the count of successfully launched clients.
         /// </summary>
         public async Task<int> LaunchMultipleClientsAsync(ClientProfile[] profiles)
         {
@@ -174,36 +166,28 @@ namespace FFXIVClientManager.Services
                 return 0;
 
             int successCount = 0;
-
             for (int i = 0; i < profiles.Length; i++)
             {
                 try
                 {
-                    var process = await LaunchClientAsync(profiles[i]);
-
-                    if (process != null)
-                    {
+                    Process proc = await LaunchClientAsync(profiles[i]);
+                    if (proc != null)
                         successCount++;
-                    }
 
-                    // Wait for the delay period before launching the next client
-                    // Skip the delay for the last profile
+                    // Wait for the specified delay before launching the next client (if any)
                     if (i < profiles.Length - 1 && _launchDelay > 0)
-                    {
                         await Task.Delay(_launchDelay * 1000);
-                    }
                 }
                 catch (Exception ex)
                 {
                     _logHelper.LogError($"Error launching client {profiles[i].ProfileName}: {ex.Message}", ex);
-                    // Continue with the next profile
+                    // Continue launching the next profile even if one fails
                 }
             }
-
             return successCount;
         }
 
-        #region Event Handlers
+        #region Event Triggers
 
         protected virtual void OnClientLaunched(ClientProfile profile, Process process)
         {
@@ -219,7 +203,7 @@ namespace FFXIVClientManager.Services
     }
 
     /// <summary>
-    /// Event arguments for when a client is launched
+    /// Event arguments for when a client is successfully launched.
     /// </summary>
     public class ClientLaunchedEventArgs : EventArgs
     {
@@ -234,7 +218,7 @@ namespace FFXIVClientManager.Services
     }
 
     /// <summary>
-    /// Event arguments for when a launch fails
+    /// Event arguments for when a client launch fails.
     /// </summary>
     public class LaunchFailedEventArgs : EventArgs
     {

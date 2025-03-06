@@ -1,7 +1,6 @@
 using System;
 using System.Windows.Forms;
-using FFXIV_Multi.Forms;
-using FFXIVClientManager.Forms;
+using FFXIVClientManager.Forms; // Corrected: reference the proper Forms namespace
 
 namespace FFXIVClientManager
 {
@@ -13,8 +12,10 @@ namespace FFXIVClientManager
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            // Initialize application configuration for Windows Forms (available in .NET 6+ / .NET 8)
+            ApplicationConfiguration.Initialize();
+
+            // Run the main form
             Application.Run(new MainForm());
         }
     }

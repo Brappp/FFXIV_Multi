@@ -124,7 +124,8 @@ namespace FFXIVClientManager.Forms
             dgvProfiles.Columns.Add(statusColumn);
 
             // Format the Status column
-            dgvProfiles.CellFormatting += (sender, e) => {
+            dgvProfiles.CellFormatting += (sender, e) =>
+            {
                 if (e.RowIndex >= 0 && e.ColumnIndex == statusColumn.Index)
                 {
                     var profile = (ClientProfile)dgvProfiles.Rows[e.RowIndex].DataBoundItem;
@@ -160,8 +161,18 @@ namespace FFXIVClientManager.Forms
                 CheckForUpdates();
             }
 
-            // Update launch delay from settings
-            numLaunchDelay.Value = _settings.DefaultLaunchDelay;
+            // Update launch delay from settings with validation:
+            // Ensure that the value loaded from settings is between the control's Minimum and Maximum.
+            decimal launchDelay = _settings.DefaultLaunchDelay;
+            if (launchDelay < numLaunchDelay.Minimum)
+            {
+                launchDelay = numLaunchDelay.Minimum;
+            }
+            else if (launchDelay > numLaunchDelay.Maximum)
+            {
+                launchDelay = numLaunchDelay.Maximum;
+            }
+            numLaunchDelay.Value = launchDelay;
 
             // Update launcher status
             UpdateLauncherStatus();

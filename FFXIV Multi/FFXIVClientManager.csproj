@@ -1,21 +1,39 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
-    <RootNamespace>FFXIV_Multi</RootNamespace>
-    <Nullable>enable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<RootNamespace>FFXIV_Multi</RootNamespace>
+		<Nullable>enable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+	<!-- Automatically creates a 'Resources' folder in the project -->
+	<ItemGroup>
+		<Folder Include="Resources\" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="System.IO.Compression" Version="4.3.0" />
-  </ItemGroup>
+	<!-- Package references -->
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="System.IO.Compression" Version="4.3.0" />
+		<PackageReference Include="System.Management" Version="8.0.0" />
+	</ItemGroup>
+
+	<!-- 
+    Use 'Update' instead of 'Include' so we don't duplicate items.
+    This modifies existing compile items (added by default) to nest
+    Designer.cs and resx files under SettingsForm.cs in Solution Explorer.
+  -->
+	<ItemGroup>
+		<Compile Update="Forms\SettingsForm.Designer.cs">
+			<DependentUpon>SettingsForm.cs</DependentUpon>
+		</Compile>
+		<Compile Update="Forms\SettingsForm.resx">
+			<DependentUpon>SettingsForm.cs</DependentUpon>
+			<SubType>Designer</SubType>
+		</Compile>
+	</ItemGroup>
 
 </Project>

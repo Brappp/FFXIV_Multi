@@ -1,232 +1,104 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
-using System.Threading.Tasks;
-using FFXIV_Multi.Models;
-using FFXIVClientManager.Models;
-using FFXIVClientManager.Utils;
+using System.Text.Json;
 
-namespace FFXIVClientManager.Services
+namespace FFXIV_Multi.Models
 {
     /// <summary>
-    /// Service for launching and managing FFXIV client instances
+    /// Holds configuration settings for the launcher, including file paths and user preferences.
     /// </summary>
-    public class LauncherService
+    public class LauncherSettings
     {
-        private readonly LauncherSettings _settings;
-        private readonly LogHelper _logHelper;
-        private readonly ProcessMonitor _processMonitor;
-        private int _launchDelay;
+        // Paths and general settings
+        public string XIVLauncherPath { get; set; } = string.Empty;
+        public string BackupPath { get; set; } = string.Empty;
+        public string LogPath { get; set; } = string.Empty;
+        public int DefaultLaunchDelay { get; set; } = 0;
+        public int MaxBackupsPerProfile { get; set; } = 5;
 
-        public event EventHandler<ClientLaunchedEventArgs> ClientLaunched;
-        public event EventHandler<LaunchFailedEventArgs> LaunchFailed;
+        // Backup/Restore options
+        public bool BackupPlugins { get; set; } = false;
+        public bool RestorePlugins { get; set; } = false;
+
+        // UI/behavior settings
+        public string Theme { get; set; } = "System";  // "Light", "Dark", or "System"
+        public bool ShowTooltips { get; set; } = true;
+        public bool ConfirmOnClose { get; set; } = true;
+        public bool MinimizeToTray { get; set; } = false;
+
+        // Startup and update settings
+        public bool CheckForRunningInstances { get; set; } = true;
+        public bool StartWithWindows { get; set; } = false;
+        public bool CheckForUpdates { get; set; } = true;
+
+        // Automatic backup settings
+        public bool AutoBackupBeforeLaunch { get; set; } = false;
+        public bool AutoBackupAfterExit { get; set; } = false;
+
+        // File path for saving/loading settings (in AppData\FFXIVClientManager)
+        private readonly string _settingsFilePath = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+            "FFXIVClientManager", "settings.json");
 
         /// <summary>
-        /// Initializes a new instance of the LauncherService
+        /// Loads settings from disk (if available) into this instance.
+        /// If no settings file exists, defaults (initialized above) are used.
         /// </summary>
-        public LauncherService(LauncherSettings settings, LogHelper logHelper, ProcessMonitor processMonitor)
+        public void LoadSettings()
         {
-            _settings = settings ?? throw new ArgumentNullException(nameof(settings));
-            _logHelper = logHelper ?? throw new ArgumentNullException(nameof(logHelper));
-            _processMonitor = processMonitor ?? throw new ArgumentNullException(nameof(processMonitor));
-            _launchDelay = _settings.DefaultLaunchDelay;
-        }
-
-        /// <summary>
-        /// Launches a client using the specified profile
-        /// </summary>
-        public async Task<Process> LaunchClientAsync(ClientProfile profile)
-        {
-            if (profile == null)
-                throw new ArgumentNullException(nameof(profile));
-
-            if (string.IsNullOrEmpty(_settings.XIVLauncherPath) || !File.Exists(_settings.XIVLauncherPath))
+            if (!File.Exists(_settingsFilePath))
             {
-                string error = "XIVLauncher path is not set or invalid";
-                _logHelper.LogError(error);
-                OnLaunchFailed(profile, error);
-                throw new InvalidOperationException(error);
+                // No settings file: use default values
+                return;
             }
-
             try
             {
-                _logHelper.LogInfo($"Launching client for profile: {profile.ProfileName}");
-
-                // Create arguments for XIVLauncher
-                var args = BuildLaunchArguments(profile);
-
-                // Create process start info
-                var startInfo = new ProcessStartInfo
+                string json = File.ReadAllText(_settingsFilePath);
+                var loaded = JsonSerializer.Deserialize<LauncherSettings>(json);
+                if (loaded != null)
                 {
-                    FileName = _settings.XIVLauncherPath,
-                    Arguments = args,
-                    UseShellExecute = true
-                };
-
-                // Launch the process
-                var process = Process.Start(startInfo);
-
-                if (process != null)
-                {
-                    _logHelper.LogInfo($"Successfully launched client with PID {process.Id}");
-
-                    // Start tracking the process
-                    _processMonitor.TrackProcess(profile, process);
-
-                    // Update profile last used time
-                    profile.LastUsed = DateTime.Now;
-
-                    // Notify subscribers
-                    OnClientLaunched(profile, process);
-
-                    return process;
-                }
-                else
-                {
-                    string error = "Failed to start process";
-                    _logHelper.LogError(error);
-                    OnLaunchFailed(profile, error);
-                    return null;
+                    // Copy loaded values into this instance
+                    XIVLauncherPath = loaded.XIVLauncherPath;
+                    BackupPath = loaded.BackupPath;
+                    LogPath = loaded.LogPath;
+                    DefaultLaunchDelay = loaded.DefaultLaunchDelay;
+                    MaxBackupsPerProfile = loaded.MaxBackupsPerProfile;
+                    BackupPlugins = loaded.BackupPlugins;
+                    RestorePlugins = loaded.RestorePlugins;
+                    Theme = loaded.Theme;
+                    ShowTooltips = loaded.ShowTooltips;
+                    ConfirmOnClose = loaded.ConfirmOnClose;
+                    MinimizeToTray = loaded.MinimizeToTray;
+                    CheckForRunningInstances = loaded.CheckForRunningInstances;
+                    StartWithWindows = loaded.StartWithWindows;
+                    CheckForUpdates = loaded.CheckForUpdates;
+                    AutoBackupBeforeLaunch = loaded.AutoBackupBeforeLaunch;
+                    AutoBackupAfterExit = loaded.AutoBackupAfterExit;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                _logHelper.LogError($"Error launching client: {ex.Message}", ex);
-                OnLaunchFailed(profile, ex.Message);
-                throw;
+                // If there's an error reading or parsing, ignore and use defaults.
+                // (Error handling can be added here, e.g., logging to a file or console.)
             }
         }
 
         /// <summary>
-        /// Builds command line arguments for XIVLauncher
+        /// Saves the current settings to disk (in a JSON file under AppData).
         /// </summary>
-        private string BuildLaunchArguments(ClientProfile profile)
+        public void SaveSettings()
         {
-            var args = new System.Text.StringBuilder();
-
-            // Add config path argument if specified
-            if (!string.IsNullOrEmpty(profile.ConfigPath))
+            try
             {
-                args.Append($"--roamingPath=\"{profile.ConfigPath}\" ");
+                // Ensure the settings directory exists
+                Directory.CreateDirectory(Path.GetDirectoryName(_settingsFilePath) ?? string.Empty);
+                string json = JsonSerializer.Serialize(this, new JsonSerializerOptions { WriteIndented = true });
+                File.WriteAllText(_settingsFilePath, json);
             }
-
-            // Add Dalamud plugin path if specified and enabled
-            if (profile.EnableDalamud && !string.IsNullOrEmpty(profile.PluginPath))
+            catch (Exception)
             {
-                args.Append($"--dalamudPath=\"{profile.PluginPath}\" ");
+                // If saving fails, we can log a warning (not throwing to avoid crashing on exit).
             }
-
-            // Add DX11 argument if enabled
-            if (profile.ForceDX11)
-            {
-                args.Append("--dx11 ");
-            }
-
-            // Add any additional arguments
-            if (!string.IsNullOrEmpty(profile.AdditionalLaunchArgs))
-            {
-                args.Append(profile.AdditionalLaunchArgs);
-            }
-
-            return args.ToString().Trim();
-        }
-
-        /// <summary>
-        /// Sets the delay between launching multiple clients
-        /// </summary>
-        public void SetLaunchDelay(int seconds)
-        {
-            _launchDelay = Math.Max(0, seconds);
-        }
-
-        /// <summary>
-        /// Gets the current launch delay in seconds
-        /// </summary>
-        public int GetLaunchDelay()
-        {
-            return _launchDelay;
-        }
-
-        /// <summary>
-        /// Launches multiple clients with a delay between each
-        /// </summary>
-        public async Task<int> LaunchMultipleClientsAsync(ClientProfile[] profiles)
-        {
-            if (profiles == null || profiles.Length == 0)
-                return 0;
-
-            int successCount = 0;
-
-            for (int i = 0; i < profiles.Length; i++)
-            {
-                try
-                {
-                    var process = await LaunchClientAsync(profiles[i]);
-
-                    if (process != null)
-                    {
-                        successCount++;
-                    }
-
-                    // Wait for the delay period before launching the next client
-                    // Skip the delay for the last profile
-                    if (i < profiles.Length - 1 && _launchDelay > 0)
-                    {
-                        await Task.Delay(_launchDelay * 1000);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    _logHelper.LogError($"Error launching client {profiles[i].ProfileName}: {ex.Message}", ex);
-                    // Continue with the next profile
-                }
-            }
-
-            return successCount;
-        }
-
-        #region Event Handlers
-
-        protected virtual void OnClientLaunched(ClientProfile profile, Process process)
-        {
-            ClientLaunched?.Invoke(this, new ClientLaunchedEventArgs(profile, process));
-        }
-
-        protected virtual void OnLaunchFailed(ClientProfile profile, string errorMessage)
-        {
-            LaunchFailed?.Invoke(this, new LaunchFailedEventArgs(profile, errorMessage));
-        }
-
-        #endregion
-    }
-
-    /// <summary>
-    /// Event arguments for when a client is launched
-    /// </summary>
-    public class ClientLaunchedEventArgs : EventArgs
-    {
-        public ClientProfile Profile { get; }
-        public Process Process { get; }
-
-        public ClientLaunchedEventArgs(ClientProfile profile, Process process)
-        {
-            Profile = profile;
-            Process = process;
-        }
-    }
-
-    /// <summary>
-    /// Event arguments for when a launch fails
-    /// </summary>
-    public class LaunchFailedEventArgs : EventArgs
-    {
-        public ClientProfile Profile { get; }
-        public string ErrorMessage { get; }
-
-        public LaunchFailedEventArgs(ClientProfile profile, string errorMessage)
-        {
-            Profile = profile;
-            ErrorMessage = errorMessage;
         }
     }
 }

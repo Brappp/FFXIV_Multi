@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FFXIVClientManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9d33cb4f88eca02b7e4688032ba58bc9821cbc3")]
 [assembly: System.Reflection.AssemblyProductAttribute("FFXIVClientManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FFXIVClientManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
