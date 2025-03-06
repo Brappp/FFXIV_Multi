@@ -1,0 +1,11 @@
+D:\GitHub\FFXIV_Multi\FFXIV Multi\obj\Debug\net8.0-windows\FFXIVClientManager.csproj.AssemblyReference.cache
+D:\GitHub\FFXIV_Multi\FFXIV Multi\obj\Debug\net8.0-windows\FFXIVClientManager.Forms.BackupForm.resources
+D:\GitHub\FFXIV_Multi\FFXIV Multi\obj\Debug\net8.0-windows\FFXIVClientManager.Forms.BackupManagerForm.resources
+D:\GitHub\FFXIV_Multi\FFXIV Multi\obj\Debug\net8.0-windows\FFXIV_Multi.Forms.Form1.resources
+D:\GitHub\FFXIV_Multi\FFXIV Multi\obj\Debug\net8.0-windows\FFXIVClientManager.Forms.PluginManagerForm.resources
+D:\GitHub\FFXIV_Multi\FFXIV Multi\obj\Debug\net8.0-windows\FFXIVClientManager.csproj.GenerateResource.cache
+D:\GitHub\FFXIV_Multi\FFXIV Multi\obj\Debug\net8.0-windows\FFXIVClientManager.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\FFXIV_Multi\FFXIV Multi\obj\Debug\net8.0-windows\FFXIVClientManager.AssemblyInfoInputs.cache
+D:\GitHub\FFXIV_Multi\FFXIV Multi\obj\Debug\net8.0-windows\FFXIVClientManager.AssemblyInfo.cs
+D:\GitHub\FFXIV_Multi\FFXIV Multi\obj\Debug\net8.0-windows\FFXIVClientManager.csproj.CoreCompileInputs.cache
+D:\GitHub\FFXIV_Multi\FFXIV Multi\obj\Debug\net8.0-windows\FFXIVClientManager.Forms.AboutForm.resources

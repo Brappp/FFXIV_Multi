@@ -1,0 +1,522 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\utils\\servicehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:utils\\servicehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\utils\\utilityhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:utils\\utilityhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\models\\clientprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:models\\clientprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\utils\\processmonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:utils\\processmonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\services\\launcherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:services\\launcherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\models\\launchersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:models\\launchersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\forms\\backupmanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:forms\\backupmanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\forms\\aboutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:forms\\aboutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\forms\\backupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:forms\\backupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\forms\\backupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:forms\\backupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\forms\\backupform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:forms\\backupform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\forms\\aboutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:forms\\aboutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\services\\pluginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:services\\pluginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\services\\profilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:services\\profilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\utils\\fileutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:utils\\fileutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\utils\\jsonhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:utils\\jsonhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\utils\\loghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:utils\\loghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\utils\\updatechecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:utils\\updatechecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\models\\plugininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:models\\plugininfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\services\\backupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:services\\backupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\forms\\pluginmanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:forms\\pluginmanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\forms\\pluginmanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:forms\\pluginmanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\forms\\backupmanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:forms\\backupmanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\forms\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:forms\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|d:\\github\\ffxiv_multi\\ffxiv multi\\forms\\profileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7124B6E-424B-4C15-95BD-C97920E61C6E}|FFXIVClientManager.csproj|solutionrelative:forms\\profileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 99,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceHelper.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Utils\\ServiceHelper.cs",
+              "RelativeDocumentMoniker": "Utils\\ServiceHelper.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Utils\\ServiceHelper.cs",
+              "RelativeToolTip": "Utils\\ServiceHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T23:13:19.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UtilityHelper.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Utils\\UtilityHelper.cs",
+              "RelativeDocumentMoniker": "Utils\\UtilityHelper.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Utils\\UtilityHelper.cs",
+              "RelativeToolTip": "Utils\\UtilityHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T23:13:07.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProcessMonitor.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Utils\\ProcessMonitor.cs",
+              "RelativeDocumentMoniker": "Utils\\ProcessMonitor.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Utils\\ProcessMonitor.cs",
+              "RelativeToolTip": "Utils\\ProcessMonitor.cs",
+              "ViewState": "AgIAAK8BAAAAAAAAAAAgwMgBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T21:16:02.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\MainForm.Designer.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\MainForm.Designer.cs",
+              "RelativeToolTip": "Forms\\MainForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T21:21:21.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "Forms\\MainForm.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\MainForm.cs [Design]",
+              "RelativeToolTip": "Forms\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T21:21:12.015Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "Forms\\MainForm.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\MainForm.cs",
+              "RelativeToolTip": "Forms\\MainForm.cs",
+              "ViewState": "AgIAANEDAAAAAAAAAAAgwOoDAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T21:46:50.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClientProfile.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Models\\ClientProfile.cs",
+              "RelativeDocumentMoniker": "Models\\ClientProfile.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Models\\ClientProfile.cs",
+              "RelativeToolTip": "Models\\ClientProfile.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAAA1wMUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T20:57:22.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LauncherService.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Services\\LauncherService.cs",
+              "RelativeDocumentMoniker": "Services\\LauncherService.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Services\\LauncherService.cs",
+              "RelativeToolTip": "Services\\LauncherService.cs",
+              "ViewState": "AgIAAOAAAAAAAAAAAAAgwPkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T20:57:45.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LauncherSettings.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Models\\LauncherSettings.cs",
+              "RelativeDocumentMoniker": "Models\\LauncherSettings.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Models\\LauncherSettings.cs",
+              "RelativeToolTip": "Models\\LauncherSettings.cs",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAgwOcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T20:57:32.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BackupForm.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\BackupForm.cs",
+              "RelativeDocumentMoniker": "Forms\\BackupForm.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\BackupForm.cs",
+              "RelativeToolTip": "Forms\\BackupForm.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAADwvzQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T20:58:36.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BackupForm.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\BackupForm.cs",
+              "RelativeDocumentMoniker": "Forms\\BackupForm.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\BackupForm.cs [Design]*",
+              "RelativeToolTip": "Forms\\BackupForm.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T21:12:32.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T21:00:09.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AboutForm.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\AboutForm.cs",
+              "RelativeDocumentMoniker": "Forms\\AboutForm.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\AboutForm.cs",
+              "RelativeToolTip": "Forms\\AboutForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T21:15:30.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AboutForm.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\AboutForm.cs",
+              "RelativeDocumentMoniker": "Forms\\AboutForm.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\AboutForm.cs [Design]*",
+              "RelativeToolTip": "Forms\\AboutForm.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T21:44:23.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BackupForm.resx",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\BackupForm.resx",
+              "RelativeDocumentMoniker": "Forms\\BackupForm.resx",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\BackupForm.resx",
+              "RelativeToolTip": "Forms\\BackupForm.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-03-06T21:45:31.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PluginService.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Services\\PluginService.cs",
+              "RelativeDocumentMoniker": "Services\\PluginService.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Services\\PluginService.cs",
+              "RelativeToolTip": "Services\\PluginService.cs",
+              "ViewState": "AgIAAFYBAAAAAAAAAAAAwHMBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T20:57:50.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BackupManagerForm.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\BackupManagerForm.cs",
+              "RelativeDocumentMoniker": "Forms\\BackupManagerForm.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\BackupManagerForm.cs",
+              "RelativeToolTip": "Forms\\BackupManagerForm.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAAAHYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T21:11:39.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "JsonHelper.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Utils\\JsonHelper.cs",
+              "RelativeDocumentMoniker": "Utils\\JsonHelper.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Utils\\JsonHelper.cs",
+              "RelativeToolTip": "Utils\\JsonHelper.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAADwv6kAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T20:58:13.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LogHelper.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Utils\\LogHelper.cs",
+              "RelativeDocumentMoniker": "Utils\\LogHelper.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Utils\\LogHelper.cs",
+              "RelativeToolTip": "Utils\\LogHelper.cs",
+              "ViewState": "AgIAAMQAAAAAAAAAAADwv+UAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T20:58:04.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProfileManager.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Services\\ProfileManager.cs",
+              "RelativeDocumentMoniker": "Services\\ProfileManager.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Services\\ProfileManager.cs",
+              "RelativeToolTip": "Services\\ProfileManager.cs",
+              "ViewState": "AgIAADUBAAAAAAAAAADwv1YBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T20:58:00.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FileUtils.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Utils\\FileUtils.cs",
+              "RelativeDocumentMoniker": "Utils\\FileUtils.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Utils\\FileUtils.cs",
+              "RelativeToolTip": "Utils\\FileUtils.cs",
+              "ViewState": "AgIAAOMAAAAAAAAAAADwvwQBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T20:58:08.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UpdateChecker.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Utils\\UpdateChecker.cs",
+              "RelativeDocumentMoniker": "Utils\\UpdateChecker.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Utils\\UpdateChecker.cs",
+              "RelativeToolTip": "Utils\\UpdateChecker.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAA7wLgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T21:16:53.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "PluginInfo.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Models\\PluginInfo.cs",
+              "RelativeDocumentMoniker": "Models\\PluginInfo.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Models\\PluginInfo.cs",
+              "RelativeToolTip": "Models\\PluginInfo.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAADwv4cAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T20:57:37.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BackupService.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Services\\BackupService.cs",
+              "RelativeDocumentMoniker": "Services\\BackupService.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Services\\BackupService.cs",
+              "RelativeToolTip": "Services\\BackupService.cs",
+              "ViewState": "AgIAAOABAAAAAAAAAAAAwP0BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T20:57:55.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "README.md",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAAAKIAAAC3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-03-06T21:17:14.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PluginManagerForm.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\PluginManagerForm.cs",
+              "RelativeDocumentMoniker": "Forms\\PluginManagerForm.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\PluginManagerForm.cs [Design]",
+              "RelativeToolTip": "Forms\\PluginManagerForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T21:14:18.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "BackupManagerForm.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\BackupManagerForm.cs",
+              "RelativeDocumentMoniker": "Forms\\BackupManagerForm.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\BackupManagerForm.cs [Design]*",
+              "RelativeToolTip": "Forms\\BackupManagerForm.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T21:12:28.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "PluginManagerForm.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\PluginManagerForm.cs",
+              "RelativeDocumentMoniker": "Forms\\PluginManagerForm.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\PluginManagerForm.cs",
+              "RelativeToolTip": "Forms\\PluginManagerForm.cs",
+              "ViewState": "AgIAANACAAAAAAAAAADwv/ECAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T20:58:41.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "SettingsForm.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\SettingsForm.cs",
+              "RelativeDocumentMoniker": "Forms\\SettingsForm.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\SettingsForm.cs",
+              "RelativeToolTip": "Forms\\SettingsForm.cs",
+              "ViewState": "AgIAAPUCAAAAAAAAAADwvxYDAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T20:58:32.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ProfileForm.cs",
+              "DocumentMoniker": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\ProfileForm.cs",
+              "RelativeDocumentMoniker": "Forms\\ProfileForm.cs",
+              "ToolTip": "D:\\GitHub\\FFXIV_Multi\\FFXIV Multi\\Forms\\ProfileForm.cs",
+              "RelativeToolTip": "Forms\\ProfileForm.cs",
+              "ViewState": "AgIAAEsCAAAAAAAAAADwv2wCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T20:58:27.622Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 236,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
